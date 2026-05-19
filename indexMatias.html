@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleMatias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAE5klEQVRogc2aW4iVVRTHf3M0KyZTQSYrSrMQrZeefCrCKCvoNj2kRRFdhJ5SsgctzDKoIMqKgYjypSAjqPSUUI0zGQVdkC50kcxASmMqK0snLzBnYg3/b9ju+S5rnzNz8g/DnHO+vfZea1/W+q+1v45PD5zFOKILWADMA6YBp6jrg8DfwE7gO+D38Rpycovyk4ArgG5gEXCuU+5HoA/YBLwHDDWrQLMrMBNYDiwDTmt2cGEAeAF4FtiXKpxqwMnAKmAl0Jk6WAUGgSeBx4FDXqFawgC2Rb4FHpwA5VGf1vc3wKVeIY8BHcBDwFbgnNZ0dGEu0KsxO1o1YAqwEVhb0XZHE4qWydQ05kbpUNqwCFPkJZZUKPI58Fy6/vQAX1e0sbE3lxlRZIAt3UvAVQ5F6sBbjnYxTMYjdyXwcpGuRQasdcx8BjNgt2M2Q3wJ/KzZ9eBGHXCXAeYB1jg73gN8oc8pq1DX/+2KAx6syfNOsQHm519McK/14HOKAW/rfyNBznTaIB2P+THEqkRXGRrwGfCbQ2ZAM5/XRxXmAA8UGTBTEdaLA8C2oG0jmNkyWJvh4HlfSuQFVkjXMQasSIyw7wJHot882yGe8UMidF50hhOdGWCs9K6ETvIUQRE0NirEYUX0GF5vlOGOjElnBixOZJW2Xbbk/G6ErL9EbmvBdtkSbasqdInGjxrQnSBs+Aj4s+BZ2aEs2mJ2+D9J1GFE58yARYnCZUqWHeS8VfP0mYcRnWvaOt5MyjPYHkXaGOY6946jAcZaZ5kB8xMFjUX+UNEm71BWuVjLlXcl6jK/pgQ8BR5XmdfGM8OppHBeTdWDFHgUMYr9S/B9b8G2ipG6jabVgtKHB5Z0fxy1m64zFFY4hqMDG0ffE7V1p0d9fQj8laBPZ0pOnCnS0OfZWvI/tHfNFd4XpIHhOchm1p6tVl3IzpK54jeBM/R8qMJTjUFNRScvMkXOl1e5OnDFM4AngPX63q+g9W8Q3J4GHgWmBgZdLyI4JzLWg4M2+H5n4yPiLLb8r4eEKoLVi26X8r36MwpxM3BPgcyZWonJ4lhHnTrtr6nc50GfqMJyh+t9Bjg7SBu7lAOX4UJlgf9ELLcMO2sJFYXNmv17HW2naqvYSr0BPKUtVoW79dy7jXZklbldjmhsy3wx8Kqz82HN6iS5VS8uUK7xU0V7q6+elx3APIobYrv8+i0JitgBvT/OoBxYpoS/Km7Ylh71IJsqGtcV8BYnKmPVhBsSZZZIr6ocYeR5ZkBvRXWgrvpMaZUsBx2e8mCE04FLKs7Br/JWowZYAHm+oLHtxa+cRa7xwlKVa4rY64bsTiGMxD1yk3kG3KSA004DugsMGAyC5TEG7FN9PsZFwCtNkL5WcKpc8MKcPtaHFyHxBcdJugOY20ZlU7BbNGY0r47J3GFl/I2mh5g4mE53xkWBPDb6AbDuODTgkbyKRxGdXpcQcduB12TAGBQZYDTgNuCd40B5Y8C3Fl3FliU0Rmmvk/X/F2zsa8rodVVGdlQ8/uE2H+yGxlxalRt4Usoh3RheLjc20bAxLtOYleXGlJy4X1T3sYKI3SoG5TzMz7/v7auVVw1WKmZ0taj4gHhYTzteNYhxgkjetVr22U6575U2Wh5suUjbX/YowqzgdRvjM9mFiWVYVjyw/NtS2OSZzgXwH3NqGLhmdQX/AAAAAElFTkSuQmCC" />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAAAwCAYAAABKUAVZAAALCUlEQVR4nO1dW2wdRxn+xpgglFJSgcqlQJ1UqmgRqnkoElKk2BWU8gC1eWhTLkoNBPGEbeCBW7ENEkUgsIMiIQSVHXgoQgK7TvoASbAjkLgoIqcCWlEIHEKLQik0EELaQjLoj741y2RmZ2Z3du1j7SdZts/Znflndv75r/Ov+unZVyIhrgZwA4DrAbwQwBVs+p8A/g7gUQAPA/hLqi5ff8WplPS3aHEJ/RWn4TkA3gxgFMAwgOsC7zsJ4CiAJQDfB3ChfRwtNhLKMsaLAYwD2AvgJSXuv44/7wdwGsDXAHwZwJPt6mixEdAXScPzAcwA6AL4ZEmmMPFSAPewzRn20aLFuiKGMURV+hWATwHYWgPRW9n2LwHc0i6LFuuJEMZQAKYBHAGwvQFadwA4zD5VA/21aHEZfIyxBcD9AKY81z5SYmqL7uljn/eThhYtGkXRYt9Cr9GdHoJ+DuArJYjeD+AXnmuk7wda5mjRNFxeKVFhvgHgLQH0LAM4SK9SDOSeawC81nPPbQC+CeAuABfLzo9SrVaWClprXdDUsFJqtbdGdDlcEmMqQFJkWKZHybf759EB8EdKgxDcQcO8NLTWQ9qN6SptZ9Ba/97VQ4r2WzQHG2PcQvdpCB4DcILXHYygepm/jzOOEYJ7avRWjWutt1VpQGt9N4CBdCQ1A631IGlvkYPJGBJD+HqEG3c593cMYxzi74sR9wlN99UU5xCmmKjYxngiWmqH1npEaz0vEo4b255eob0pmAzw0UiXbJ4xfgbgiYB7TlNS2NrwQXbkT9Q0N6WlhqhpAAbTk5QWWutZqnWLAHpSwjWFPGNImseHI/o9CyBvZF3MSYIiyDV5nVtyps5H9DtBWlOjitSYqoGeOpCEeVUxet7whsEYE5ER7e8BeMb4LEQtMiXEeSYShmJrJAPHIFodorQYqomeFuuEjDHEbfu+SBJsKtBhC7Pk8TQj6CZCvVMZ3pMgM9iGbSUM0V6RFi0ikDHGrZEJgaI2PWj5/ByAHxTcd8ShNj1oqFc+XM109zoQvNBbabF5ke26o5Ej/BGAvzm+Wy4IDLpULTHafwLgDRE0jDqYsyoGRGoopRYC2kkmLWj4Z0b8Ln5sY7oO40bHJDNBKdX1tLuS+9dlYwwa12U4kM2DuHUBzPrGoZQa9l2T21Buom03yN95dI1xdnztWvoZ4VwO0tFgOhuyPqTth8RmzuYzO8H324hDRoKPAPii47tXMHjn+u5xx3fiEbs3gobfCc0RJ/jkQdgevg1dpVShd44PN7S9SwZrQVviJRoJbcuAGLtjLgapGFycUUpN439xmnnfDZ5xTtOOK+P963KcXuOeDDFb0ut2KXLfRxUqhingcbE+Rg40cbyAKXxt2rCDZznqwECArZHStijLFCDDn6gpSJd/jilcu7tKMkXW/4q4nIsuIvMtVqVXGOPVkfdIVuxvPNfYjGmfK/dhSq4YxNLugm0Xci58qhU2NSdE/aoDstjmSVdKnMm1de06jc3EhNba6lanFE+yYfWxcEEMQlyytmtCJEJM9BwlaHdhn7EI4JEaNreuMMUfEtEDMqv544PXBqiAuoKBHcs4zWdhYsoRjE2WfdDPah4xCFngkor+JwAv5/+PO9QrE9L2ZAQtsbS7cIbMYe42U6YU0FoPMGpsYsbxeQiWaGR2fDp0zgi2SSxJlBw0DNW8MTzrMMA7jnlfaydvVFNdKbMzdzjOVY7VyQCc53FH0HUb53rO+LzIQ7hAA9tch0OUhoP5uenPlbgJgRQr+LGFyBdxt/xPNi56jPbyfzPa/Tymnpw2docfAngKwFWB9KQ8YjtnMQxtHirbglgQ47esnauUCvYKyqLXWo8yx8m2iw8ZC3qN0bTWroV4pomItVIqeNOjM2GSDGKzwXZZGMNlv8jzGXN8l5+ftfmMLYZwKHcm4lqqPn+lbfAEvVWZVyJvZ2RSRr77GOtKPUKX72JOslyoyQXrBXevfZbr1hLsPNKiaVpdErhSlvAGxLGIcboYfygkD06YMfPu9bMYWiiyBX4jCc7nLMku/wW6ZCcY6DtPSZEF/YTDP5inhbvBzQB20iUnfbwrkJ4Y2kNgkxoyqUPcUZ3SIiURZECfTu/Twzc8uFhTOgw6DnVK5lLOyixxw14tUuNAxgid4GeY0yRq0HcKEvnGqcvNM0VEMxXkHQZT5HENJcfNzMF6NvA4a9LFIZOltbbaGlrrbp3Sgob+7RVdtxse9Bzt4ThTS7cDBXZGZpdceoZkEmeQtI9lM0NwlCkf4wFuUllcr6KqdZApHPs99wzy1OA/HO5TG0Jpj8GcheGGyLgmvJFnH3hQ6AQ3kk3LFCIdGMhc4eJMrvLRFgx1mWdBQJEki2TYNfRFVPh4gNLiQwHXvgDAZylZvgvgS4EG9Qf4OzTYV6Y6SSEKbA2byLddFwx6mFZ64SxHFVBlWmmC8Wlkx0rxEQYPVzJbpJ+G8MmA6PchNhCabCiq0+dZ3/adgffspP2yHCBhTqYsDm1gLsAduZrAkzNfsHNmeTwuhNghGwVTBcxf5EhALpcqGJLGorVeYL8xKtsQGWQ4SyI84mGM44xLhBrFoGH98RLp4XvpU+94JuRoZLvBoK2x4IlLVLItmM9jG58slNGAeEbZWEKj4A7sOgA2qZQyXa7mOKNy0jJQxR3TWk+SOULtN3kmE5m7dslz8TKDabdG0ifVPd4eec+dVPF8ZzRiz3DEomjhp5AWuxyfByXK9RBcxvCcjylSQDY5sT0kVsQEx1HaIUWOmz0ZYxz2VOtYZn2n2MJnqkSZzZdx0RTZGX+m96o2cMdxGXIpPFFWaaiU8m1SvQaX1K97Y7NC5pd2yPYCFW4gYwwJrH3VcdEpul9Diq+lwm5Gdl3ZuPc19E4NGwOkkBZORBRkuClht+thq4SOM9i+yEeufaCTxcmc+cj3frpjTZxiFcAmXYm7KfJsjHGu5mS5NVBqzBgJbqmi3C7DujDfKuf2LPM8nDtkjbWlXOP0luyhHRXzrO/WWj9F9+s0i+xdxlicw5EiGvKG8ZM8fGRW/NvJnyZxJV29Nsw2+YKZ7KBODTjmYIJZSo21U2u5CPHtFWMADxV8J2nr47ldVGxKifi/ruLQXdJ1hAy+z8jnyk4xjpeUZNu4aYxkzokSOWxd02N0Lz1PO0oQ1AS6jI9sBiyRyW2LfIrR9tTDLOoTZoZpCjC5ctVhhI+QQVKPsyoOmEmET7MCR+niyTVCaHpvZA2qDQvquK6MzxBEp8Owz5i0/lQYq5C+03ROmKTDT9uya0XEf7phYkLwGU8Fkp4DPVCjJR7+QlmmYtpE7W5So88uz4XEFjRYNc6T1I25rD9X2rkwxrcaJMiHb5MxNh3IHNtz7zZ0ocMHt53uxtKeMZ6LGPbEr4rc1WX67NBeGfMwSNavFCUYpp0VylBz3GjmIuYnP6+TWdZt0Xu+t9AQuy2wg7ogGb1vZcbtZQitEtIr78ewpGKfKVM6JrJPs3xN4em6hP3+n91Rlxvc7IfoFiWA+l6Av4UvbbkjEY2xEEnxbhdToH0Bfoua4DvB9yyTAWcaNsgvss/dRUzRokVdCDnaeoFvUH2TRwdOBenjjeyzfRNRi3VBzJlv8Qi9hrEOW4S8Ks7R6L+xTDZlixYpEVsM4V9MJZeI5OcCXxTjw2mqTQMMbG2KOEWL3obP+PbhuUwufBvVn9Bqdb+mO22RZ0FKJwS2xneLOlD1HRP/Znp4liIutWRvYIXAK3N1n84yiPUoj6M2luvUokU0APwXIQ+1M2lmLnAAAAAASUVORK5CYII="
+            alt="logo">
+
+        <div>
+            <ul type="none" style="margin-top: 39px;">
+                <li style="margin-left: 165px;">HOME</li>
+                <li>ABOUT</li>
+                <li>WORK</li>
+                <li>SERVICE</li>
+                <li>TESTIMONIAL</li>
+                <li>BLOG</li>
+                <li style="margin-right: 159px;">CONTACT</li>
+                <div class="h-d-2" style="margin-left: 0px; height: 100px;margin-top: -40px;">
+                    <button
+                        style="width: 158px; height: 59px; margin-left: 35px;margin-right: 74px;margin-top: 20px;">Let's
+                        Tali <span style="margin-left: 2px;">-</span>
+                        <span style="margin-left: -6px;">-</span><span style="margin-left: -1px;">-</span><span
+                            style="margin-left: -3px;">></span></button>
+                </div>
+            </ul>
+        </div>
+
+
+
+    </header>
+    <section class="section-1">
+        <div class="s-1-d-1">
+            <i class='bx bxs-grid'></i>
+            <div class="dd"
+                style="height: 5px; width: 5px;background-color: #999999; margin-top: -4px;margin-left: 20px;"></div>
+            <h2>(+02)-574-328-301</h2>
+            <h3>SCROLL DOWN</h3>
+            <!-- <img src="https://i.pinimg.com/170x/36/20/bf/3620bf4a22745472b2186063822518aa.jpg" > -->
+
+            <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAADBCAYAAAC0XlJdAAADLElEQVR4nO3dTYhNYRzH8e9oZGIhUfJSCgs1NYWN1ywkhQkbJSUsTrEQEiIiUkrJezM2CuVlgRmlRKTxzkLJysZbCgspZMZbR381aWbu3HOfnzH1+9bt3s6ce87n3jnnOc9Z3aqGhgYE3QAWAB9KbTrLsrL23kehVWawOoPVGazOYHUGqzNYncHqDFZnsDqD1RmszmB1BqszWJ3B6gxWZ7A6g9UZrM5gdQarM1idweoMVmewOoPVGazOYHUGqzNYncHqDFZnsDqD1RmszmB1BqszWJ3B6gxWZ7A6g9UZrM5gdQarM1idweoMVmewOoPVGazOYHUGqzNYncHqDFZnsDqD1RmszmB1BqszWJ3B6gxWZ7A6g9UZrM5gdQarM1idweoMVmewOoPVGazOYHUGqzNYncHqDFZnsLpeB64GRgOvgNb/wNNpjY2NA4GaHHwAGBkrtgCXgGtAWw8DhwALgdlAbfwi5oUcPC/W6Q/MAOYD+4Hz8fzmH0OnAWuBMcAZYBfwOMuyn8Qh8afPwOV49AOWAlfisQP4KIbWAXuBr8CeLMtaOlqvuqOF8aZjwHFgJXAX2Ag0C6D5l7MdmAmsz7LsZlfrlxol2uIYz4+j1fG6sw9ZpFHA9Tjhp5bCUsbOXwZ6d5yUixIcIhOA08CqLMuudvdN5YzDP4BNQFMc1wOKOX83CTgB1JeDpeC/9wiQn7EXgTkFxu/aOD/y0ehZuTsveqU7CtwBDpb5vkHAOWB5ESwVXpq3AcOBJd1cvypGnfw8eFh0p5Wc8flhsQK4Hb/P/LrE+stirD9ZwT4rnvy8A7YA+0qsNxjYEENjRaWYrZ0FhgKTu1hnK3AoPmCPg/M2Azs7+dswYFaMDBWXCnwrtlXXwd/WxSQqyfQ15QT+MLDmr2V9Y4p4KtVOUoKb4jiuabesPmZ/n1LtJCU4nyjll9m57ZYtjjltslLf0zXH7+UTY/z4uCL+t+D8AjIxXk+Jk/F7yh2kBrfGFW8sMD3uEZOmuM1/BIyIb/pBbwDfj+dxwJPUG1eAn8bzW+Bb6o0rwM/j+YVg2xLwF+C9CpzyDrh9+UT9XvKtAr8ASJF/F9PufdsAAAAASUVORK5CYII" alt=""> -->
+            <i class='bx bx-chevrons-down' style="margin-left:10px; margin-top: 15px;"></i>
+            <i class='bx bx-chevrons-down' style="margin-left: 10px; margin-top: -15px;"></i>
+            <i class='bx bx-chevrons-down' style="margin-left: 10px; margin-top: -15px;"></i>
+            <i class='bx bx-chevrons-down' style="margin-left: 10px; margin-top: -15px;"></i>
+        </div>
+
+        <div class="s-1-d-2">
+            <div class="s-1-d-2-1">
+                <div class="d-2-1-1">
+                    Currently Available For Freelance
+                </div>
+                <div class="d-2-1-2">
+                    <h2>Worldwide</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                        </path>
+                    </svg>
+
+                </div>
+
+            </div>
+            <div class="s-1-d-2-2">
+                <div class="d-2-2-1">Creative Visual</div>
+                <div class="d-2-2-2"> Designer</div>
+                <div class="d-2-2-3" style="margin-top: -123px;">
+                    Designer
+
+                </div>
+                <div class="d-2-2-4">
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABECAYAAAAlba0pAAADuElEQVRogd2a8XHaMBTGX7n+X2eCOhvABHUnKJ2g7gSlE5BOEDKByQSQCSATwAbQCcwG6unuKX15Z9mSebJkvjtdDDi2fn7yk/RJH5RS0FM5AFywJKmJR6UyAFgAwA4AagA44d8KQdOTjlxHyZRSS6VUrf7roJRa4G8u14hSum5aKKVOBEofz1MGoqXtx6V6r1XqkXKFo2A1RnA0UG1wS9YM8zGC6cK7ggKzIWCKnwHAOdVU3yXaFWSY1o1+jxkMGNwv0l+tsYxaplnm2BwN3P3YowYkcgWL2ujBgMD9IN+9RKqLuEyzpCnzLuXBsI8m2CSNzrcCBgiXkc838a4ZcbibEp/PpTkv6ykOd1NR1HBH8lnDfY5YH1FNGpLI95EzvWmCqZ8CfotcJzGZd46OSopbSSwGbsu+LyPURVx0snoAgCkeX3BmMOrRCu0KnsixzpqPEeojKm4znNj79hUA9sL3zLDkmMjCDfmYqVIwO+8kZOfp6z4yD5Rqp5Qqh3C/VuzGmytukCGUq0TdNttCCE0uWis0jHzErQvAJvhCRkVT7Ff5OTORZGahzhua0NIzYvT/6w4bfsHWIh5CNUtTpuyGPoC0Kbo2tZK9g0HhbIC7jsrm7HwfK95Eux4CzgZ4aql0Rc6rPCtUk+sPAmcAm9J4xaJ4TdToGsV2SDiwJBnzlBd4Tsm+7wPm+1BE4Ex5aAA0MBTe5ekX+A5TrSTA+sK1RZFqh5XnI5wcI8yhtNZSYNfAmVI6QLpKLGJScKbMLZFw0S7Uyu01+1CaxGcVNplh2DbArONNH4WvdyZwTzgm5ePGwTbmSMP9Jcefgs/XOuSzg8hF1AO9GwrCppBwX4Sv7a2QcNHda2m4C8t+P4Wv7yVpOK1Xchy1aUr3c4Cp/0Q+h3DQnBQicmcGswxwDyeFgNP6Q46LWPZ8iGZptCObCaLsIwsVOWBWoO4WNkOv3IaEOzLAac/1hwr/r3A4971CTDVYWbNpz8HTVd6w2b72bZymSEPANQH62OY2c6pG0NK2njEUHFi8F+6e2Ure8IC4zGJKHgMOGna706YmBanQ8Q7aFbSpxJ2CPEkccQDwit3Gkf2eY8YtcfNrm2ax4Ghl57jS458N7dIP5j42HFWG3UWBA+5pj37xQuyNS0pwTSocO/89Gk5r6s9IeyiSmmPnbQMzUdpbZx0DZ8uukuG6Q5vR6+xzphS5KTbBJt+zsdl1KZV3Lsd1eNoEu5tdh1KJXIVgF3ShnyVm76lETnfKxlyScaMB4B9LQLHGWQdpggAAAABJRU5ErkJggg==">
+                    <div>
+                        <div>
+                            <div><i class='bx bxs-right-arrow'></i></div>
+                        </div>
+                    </div>
+                    <h2>Work Process</h2>
+                </div>
+            </div>
+
+
+        </div>
+        <img src="https://matias-react.vercel.app/assets/banner-man-62844818.png" alt="man">
+        <div class="s-1-d-3">
+            <h2>FOLLOW ME</h2>
+            <i class='bx bxs-chevron-down' style="margin-top: -15px;"></i>
+            <i class='bx bxs-chevron-down' style="margin-top: -90px;"></i>
+            <i class='bx bxs-chevron-down' style="margin-top: -90px;"></i>
+            <i class='bx bxs-chevron-down' style="margin-top: -90px;"></i>
+            <i class='bx bxs-chevron-down' style="margin-top: -90px;"></i>
+            <i class='bx bxs-chevron-down' style="margin-top: -90px;"></i>
+
+            <div><i class='bx bxl-facebook-circle'></i></div>
+            <div><i class='bx bxl-twitter'></i></div>
+            <div><i class='bx bxl-linkedin-square'></i></div>
+            <div><i class="fa-solid fa-globe" style="font-size: 26px; margin-right: 12px;margin-top: 12px;"></i></div>
+            <div><i class='bx bxl-instagram'></i></div>
+        </div>
+    </section>
+
+    <section class="section-2">
+        <marquee behavior="SCROLL" direction="left">
+            <img src="https://matias-react.vercel.app/assets/ts3-32884f50.png">
+            <img
+                src="data:image/png;base64,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">
+            <img src="https://matias-react.vercel.app/assets/ts1-2ad47110.png">
+            <img
+                src="data:image/png;base64,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">
+
+        </marquee>
+    </section>
+    <section class="section-3">
+        <div class="s-3-d-1">
+            <img
+                src="data:image/png;base64,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">
+            <h3>I'm David Matias, I'm a Brand & Webflow Designer, Currently residing in the lush Victoria Street London,
+                Matias operates globally and is ready to take on any design challenge.
+            </h3>
+            <button style="margin-left: 0px; background-color: #c8f31d; color: black;">ABOUT</button>
+            <button>EXPERIENCE</button>
+            <button>EDUCATION</button>
+            <button>SKILLS</button>
+        </div>
+    </section>
+
+    <section class="section-4">
+        <div class="s-4-d-1">
+            <img src="https://matias-react.vercel.app/assets/personal-infothumb-2653662e.png" alt="">
+            <div>
+                <h1>Personal Info</h1>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur, aliquam quaerats voluptatem.
+                    Ut enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse quam
+                    nihil
+                </p>
+                <div>
+                    <h3>Email</h3>
+                    <h4>Matias999@Gmail.Com</h4>
+                </div>
+                <div style="margin-left: 23px;">
+                    <h3>Phone</h3>
+                    <h4>+(2) 871 382 023</h4>
+                </div>
+                <div style="margin-top: 28px;">
+                    <h3>phone</h3>
+                    <h4>Victoria Street London,ashu!</h4>
+                </div>
+                <div style="margin-left: 23px; margin-top: 28px;">
+                    <h3>Follow</h3>
+                    <h4>
+                        <i class='bx bxl-facebook-circle' style="margin-left: 0px;"></i>
+                        <i class='bx bxl-twitter'></i>
+                        <i class='bx bxl-linkedin-square'></i>
+                        <i class='bx bxl-firefox'></i>
+                        <i class='bx bxl-instagram'></i>
+                    </h4>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="s-4-d-2">
+            <marquee behavior="SCROLL" direction="Right">
+                <img src="data:image/png;base64,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"
+                    alt="">
+                <img src="https://matias-react.vercel.app/assets/ts6-f71fbf8d.png" alt="">
+                <img src="https://matias-react.vercel.app/assets/ts7-e5bd3c80.png" alt="">
+                <img src="data:image/png;base64,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"
+                    alt="">
+                <img src="https://matias-react.vercel.app/assets/ts7-e5bd3c80.png" alt="">
+
+            </marquee>
+
+        </div>
+    </section>
+
+    <section class="section-5">
+        <div class="s-5-d-1">
+            <div class="s-5-d-1-1">
+                <h2>Our Awards </h2>
+                <h3>View My Work</h3>
+            </div>
+            <div class="s-5-d-1-2">
+                <h4>Site Of The Day </h4>
+                <h5>Css & Animation </h5>
+                <h6>2018</h6>
+
+            </div>
+            <div class="s-5-d-1-2">
+                <h4>Best Business Model </h4>
+                <h5 style="margin-left: 395px;">New Strategy </h5>
+                <h6>2019</h6>
+
+            </div>
+            <div class="s-5-d-1-2">
+                <h4>Motion Graphic </h4>
+                <h5>3D & Visual Effect </h5>
+                <h6>2020</h6>
+
+            </div>
+            <div class="s-5-d-1-2">
+                <h4>Video Design </h4>
+                <h5 style="margin-left: 456px;">Css & Animation </h5>
+                <h6>2022</h6>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-6">
+        <div class="s-6-d-1">
+            <h1>Complet Project</h1>
+            <h2>Look At My Portfolio And Give Me Your Feedback</h2>
+            <div class="s-6-d-1-2" style="margin-top: 62px;height: 557px; margin-left: 100px;">
+                <img src="https://matias-react.vercel.app/assets/pro1-4e06b6ed.png" alt="">
+                <div>
+                    <h3>PRODUCT DESIGN</h3>
+                    <h4>Brand Identity & Motion Design</h4>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                            </path>
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+            <div class="s-6-d-1-1" style="margin-top: 62px;height: 713px;">
+                <img src="https://matias-react.vercel.app/assets/pro2-f70978ea.png" alt="">
+                <div>
+                    <h3>UI/UX Design</h3>
+                    <h4>Mobile Application Development</h4>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+            <div class="s-6-d-1-1" style="margin-top: -88px;height: 557px;margin-left: 100px;">
+                <img src="https://matias-react.vercel.app/assets/pro3-454e8e4f.png" alt="">
+                <div>
+                    <h3>Product Design</h3>
+                    <h4>Design & Branding Mokeup</h4>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="s-6-d-1-2" style="height: 557px;margin-top: 62px;">
+                <img src="https://matias-react.vercel.app/assets/pro4-d98308c3.png" alt="">
+                <div>
+                    <h3>UI/UX Design</h3>
+                    <h4>Mobile Application Development</h4>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="s-6-d-1-1" style="margin-top: -88px;height: 713px;margin-left: 100px;">
+                <img src="https://matias-react.vercel.app/assets/pro5-66e59ab7.png" alt="">
+                <div>
+                    <h3>UI/UX Design</h3>
+                    <h4>Mobile Application Development</h4>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="s-6-d-1-1" style="height: 557px;margin-top: 64px;">
+                <img src="https://matias-react.vercel.app/assets/pro6-f38a046d.png" alt="">
+                <div>
+                    <h3>UI/UX Design</h3>
+                    <h4>Mobile Application Development</h4>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="s-6-d-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="40px" height="30px" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                </path>
+            </svg>
+            <h4>Click More Work</h4>
+        </div>
+        <div class="s-6-d-3"></div>
+    </section>
+
+    <section class="section-7">
+        <div class="s-7-d-1">
+            <h2>Need a Project?</h2>
+            <h4>Let's Work Together. Fixed A Meeting </h4>
+            <div style="margin-top: 59px;">
+                <div><i class='bx bx-envelope'></i></div>
+                <h3>Email</h3>
+                <h5>Davidmatias333@gmail.com</h5>
+            </div>
+            <div>
+                <div><i class='bx bx-envelope'></i></div>
+                <h3>Location</h3>
+                <h5 style="margin-left: -50px;">Victoria Street London, England</h5>
+            </div>
+        </div>
+        <img src="https://matias-react.vercel.app/assets/project-need-dee85a1f.png" alt="">
+    </section>
+
+    <section class="section-8">
+        <div class="s-8-d-1">
+            <h2>Services That i Provide</h2>
+            <h3>My Special Service For Your Business Development</h3>
+        </div>
+        <div class="s-8-d-2" style="margin-top: 60px;">
+            <div class="s8-d-2-1">
+                <h1>01</h1>
+                <h2>Designer</h2>
+                <h3>Illustration Design</h3>
+            </div>
+            <div class="s8-d-2-2">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. sunt in culpa qui officia deserunt mollit
+                </p>
+            </div>
+            <div class="s8-d-2-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div class="s-8-d-2">
+            <div class="s8-d-2-1">
+                <h1>02</h1>
+                <h2>Branding</h2>
+                <h3>Business Branding</h3>
+            </div>
+            <div class="s8-d-2-2">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. sunt in culpa qui officia deserunt mollit
+                </p>
+            </div>
+            <div class="s8-d-2-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div class="s-8-d-2">
+            <div class="s8-d-2-1">
+                <h1>03</h1>
+                <h2>UI/UX Design</h2>
+                <h3>Web UI/UX Design</h3>
+            </div>
+            <div class="s8-d-2-2">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. sunt in culpa qui officia deserunt mollit
+                </p>
+            </div>
+            <div class="s8-d-2-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div class="s-8-d-2">
+            <div class="s8-d-2-1">
+                <h1>04</h1>
+                <h2>Web Design</h2>
+                <h3>Application Design</h3>
+            </div>
+            <div class="s8-d-2-2">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. sunt in culpa qui officia deserunt mollit
+                </p>
+            </div>
+            <div class="s8-d-2-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div class="s-8-d-2">
+            <div class="s8-d-2-1">
+                <h1>05</h1>
+                <h2>SEO Analytics</h2>
+                <h3> Digital Marketing</h3>
+            </div>
+            <div class="s8-d-2-2">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. sunt in culpa qui officia deserunt mollit
+                </p>
+            </div>
+            <div class="s8-d-2-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-9">
+        <div class="s-9-d-1">
+            <h2>Working Process</h2>
+            <h3 style="width: 879px;margin-left: 260px;">Your Dream Website In Just Few <span
+                    style="margin-left: -20px;">Steps</span></h3>
+        </div>
+        <div class="s-9-d-2" style="margin-left: 103px;">
+            <h1>Concept</h1>
+            <ul type="none"> Nemo enim ipsam voluptatem voluptas sit aspernatur aut odit aut fugit
+                <li style="    margin-top: 30px;">Reviewing any existing branding</li>
+                <li>Target audience and competitors research</li>
+                <li>Developing a strategy</li>
+            </ul>
+            <div class="s9-d-2-1">
+            </div>
+
+        </div>
+        <div class="s-9-d-2">
+            <h1>Design</h1>
+            <ul type="none"> Nemo enim ipsam voluptatem voluptas sit aspernatur aut odit aut fugit
+                <li style="margin-top: 30px;">Developing wireframes and mockup </li>
+                <li>Choosing typography, color palettes</li>
+                <li>Refining the design</li>
+
+            </ul>
+            <div class="s9-d-2-1">
+            </div>
+
+        </div>
+        <div class="s-9-d-2">
+            <h1>Webflow</h1>
+            <ul type="none"> Nemo enim ipsam voluptatem voluptas sit aspernatur aut odit aut fugit
+                <li style="margin-top: 30px;">Testing the website thoroughly launch</li>
+                <li>Choosing typography, color palettes</li>
+                <li>Refining the design</li>
+
+            </ul>
+            <div class="s9-d-2-1">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-10">
+        <div class="s-10-d-1">
+            <h2>GET IN TOUCH</h2>
+
+        </div>
+        <div class="s-10-d-2">
+            <h3>Hello, I’m David Matias, Website & User Interface Designer based in London.</h3>
+            <h4>Davidmatias333@gmail.com</h4>
+        </div>
+        <div class="s-10-d-3" style="margin-top: 62px;margin-left: 92px;">
+            <h6>Facebook</h6>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                </path>
+            </svg>
+        </div>
+        <div class="s-10-d-3" style="margin-top: 62px;">
+            <h6>Instagram</h6>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                </path>
+            </svg>
+        </div>
+        <div class="s-10-d-3" style="margin-left: 92px;">
+            <h6>Dribble</h6>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                </path>
+            </svg>
+        </div>
+        <div class="s-10-d-3">
+            <h6>Webflow</h6>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="2em" height="1.2em" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z">
+                </path>
+            </svg>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright <span style="color: #c8f31d;">©</span> 2025 <span style="color: #c8f31d;">Ashu!</span>.  All rights reserved.Terms & Condition Privacy Policy</p>
+    </footer>
+</body>
+
+</html>
